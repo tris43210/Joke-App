@@ -1,7 +1,7 @@
 const jokeSection = document.getElementById(`joke-section`);
 
 async function getJokes() {
-  const getData = await fetch(`http://localhost:8080/jokes`);
+  const getData = await fetch(`https://joke-app-vhf6.onrender.com/jokes`);
   const retrieveJokes = await getData.json();
   console.log(retrieveJokes);
   generateHTML(retrieveJokes);
@@ -31,7 +31,7 @@ form.addEventListener(`submit`, async function (event) {
   const formData = new FormData(form);
   const userInput = Object.fromEntries(formData);
 
-  const sendToServer = await fetch(`http://localhost:8080/jokes`, {
+  const sendToServer = await fetch(`https://joke-app-vhf6.onrender.com/jokes`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
