@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/main.js" defer></script>
+    <title>client</title>
+  </head>
+  <body>
+    <div id="app">
+      <form id="form">
+        <label for="addJoke">Add Joke:</label>
+        <input type="text" name="joke" id="addJoke" required />
+
+        <label for="addPunchline">Punchline:</label>
+        <input type="text" name="punchline" id="addPunchline" required />
+
+        <button type="submit">Submit</button>
+      </form>
+      <div id="joke-section"></div>
+    </div>
+  </body>
+</html>
